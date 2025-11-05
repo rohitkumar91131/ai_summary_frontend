@@ -68,8 +68,8 @@ export default function Header() {
               to="/login"
               className="flex items-center gap-2 text-slate-700 font-medium hover:text-blue-600 transition"
             >
-              <LogIn size={18} />
-              Sign in
+              <LogIn size={20} />
+              <span className="hidden sm:inline">Sign in</span>
             </Link>
           ) : (
             <>
@@ -77,15 +77,15 @@ export default function Header() {
                 to="/summaries"
                 className="flex items-center gap-2 text-slate-700 font-medium hover:text-blue-600 transition"
               >
-                <FileText size={18} />
-                My Summaries
+                <FileText size={20} />
+                <span className="hidden sm:inline">My Summaries</span>
               </Link>
               <button
                 onClick={handleLogout}
                 className="flex items-center gap-2 text-red-500 font-medium hover:text-red-600 transition"
               >
-                <LogOut size={18} />
-                Logout
+                <LogOut size={20} />
+                <span className="hidden sm:inline">Logout</span>
               </button>
             </>
           )}

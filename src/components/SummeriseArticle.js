@@ -144,7 +144,7 @@ export default function SummeriseArticle() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2m-8 0h8M7 11h10M7 15h10M7 19h10" />
                   </svg>
                 )}
-                <span className="text-slate-600">{copied ? "Copied" : "Copy"}</span>
+                <span className="text-slate-600 hidden sm:block">{copied ? "Copied" : "Copy"}</span>
               </button>
 
               <h4 className="text-lg font-semibold text-slate-700 mb-3">Here is your summary</h4>
