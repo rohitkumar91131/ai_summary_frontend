@@ -10,7 +10,7 @@ export default function Header() {
   const handleLogout = async () => {
     try {
       setVerifyingToken(true);
-      const res = await fetch(`/auth/logout`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/logout`, {
         method: "POST",
         credentials: "include",
       });

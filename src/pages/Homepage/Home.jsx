@@ -7,13 +7,13 @@ import { useAuth } from '../../context/AuthContext';
 function HomePage() {
     const {isLoggedIn , setIsLoggedIn , verifyingToken , setVerifyingToken} = useAuth();
     useEffect(() => {   
+        setVerifyingToken(true) ;
         async function checkAuth() {
             try {
-                const res = await fetch(`/auth/verify`, {
+                const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/verify`, {
                     method: 'GET',
                     credentials: 'include',
                 });    
-                setVerifyingToken(true) ;
                 const data = await res.json();   
                 if(data.success){  
                     setIsLoggedIn(true);
