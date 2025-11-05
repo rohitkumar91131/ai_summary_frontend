@@ -9,7 +9,7 @@ function HomePage() {
     useEffect(() => {   
         async function checkAuth() {
             try {
-                const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/verify`, {
+                const res = await fetch(`/auth/verify`, {
                     method: 'GET',
                     credentials: 'include',
                 });    

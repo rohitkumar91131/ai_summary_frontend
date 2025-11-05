@@ -10,7 +10,7 @@ export default function MySummary() {
 
   const fetchMySummaries = async () => {
     try {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}/article/user/me`, {
+      const res = await fetch(`/article/user/me`, {
         method: "GET",
         credentials: "include",
       });
