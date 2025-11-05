@@ -23,7 +23,7 @@ export default function SummeriseArticle() {
     }, 300);
 
     try {
-      const res = await fetch("http://localhost:4000/article", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/article`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

@@ -10,7 +10,7 @@ export default function MySummary() {
 
   const fetchMySummaries = async () => {
     try {
-      const res = await fetch("http://localhost:4000/article/user/me", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/article/user/me`, {
         method: "GET",
         credentials: "include",
       });
@@ -29,7 +29,8 @@ export default function MySummary() {
   }, []);
 
   const handleShare = async (id) => {
-    const url = `http://localhost:3000/summaries/${id}`;
+    const url = `${process.env.REACT_APP_FRONTEND_URL}/summaries/${id}`;
+
     try {
       await navigator.clipboard.writeText(url);
       toast.success("✅ URL copied to clipboard!");

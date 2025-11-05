@@ -10,8 +10,12 @@ import HomePage from './pages/Homepage/Home';
 import { AuthProvider } from './context/AuthContext';
 import MySummary from './pages/dashboard/MySummeries';
 import Dashboard from './pages/dashboard/Dashboard';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(()=>{
+    document.title = "AI Summariser" ;
+  },[]) ;
   return (
     <Router>
       <AuthProvider>

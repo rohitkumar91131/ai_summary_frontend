@@ -7,9 +7,10 @@ import { useAuth } from '../../context/AuthContext';
 function HomePage() {
     const {isLoggedIn , setIsLoggedIn , verifyingToken , setVerifyingToken} = useAuth();
     useEffect(() => {   
+        alert(process.env.REACT_APP_API_URL)
         async function checkAuth() {
             try {
-                const res = await fetch('http://localhost:4000/auth/verify', {
+                const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/verify`, {
                     method: 'GET',
                     credentials: 'include',
                 });    
