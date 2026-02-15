@@ -58,7 +58,6 @@ export default function Signup() {
 
   return (
     <div className="h-[100dvh] w-[100dvw] flex flex-col md:flex-row">
-      {/* Left image for large screens */}
       <div className="hidden md:flex w-1/2 bg-gray-100 items-center justify-center relative">
         <img
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
@@ -75,7 +74,6 @@ export default function Signup() {
         </div>
       </div>
 
-      {/* Full background for small screens */}
       <div className="relative md:hidden flex-1 flex items-center justify-center">
         <img
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
@@ -180,7 +178,6 @@ export default function Signup() {
         </div>
       </div>
 
-      {/* Right side form for large screens */}
       <div className="hidden md:flex flex-1 items-center justify-center p-8 bg-white">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
           <h2 className="text-3xl font-semibold text-slate-800 text-center">

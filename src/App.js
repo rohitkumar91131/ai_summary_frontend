@@ -11,21 +11,24 @@ import { AuthProvider } from './context/AuthContext';
 import MySummary from './pages/dashboard/MySummeries';
 import Dashboard from './pages/dashboard/Dashboard';
 import { useEffect } from 'react';
+import Ask from './pages/AskAiAboutSummary/Ask';
 
 function App() {
-  useEffect(()=>{
-    document.title = "AI Summariser" ;
-  },[]) ;
+  useEffect(() => {
+    document.title = "AI Summariser";
+  }, []);
   return (
     <Router>
       <AuthProvider>
-      <Routes>
-        <Route path="/" element={<HomePage/>} />
-        <Route path="/signup" element={<Signup/>} />
-        <Route path='/login' element={<Login/>} />
-        <Route path="/summary" element={<AISummary/>} />
-        <Route path='/summaries' element={<Dashboard/>} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path='/login' element={<Login />} />
+          <Route path="/summary" element={<AISummary />} />
+          <Route path='/summaries' element={<Dashboard />} />
+          <Route path='/summaries/:id' element={<Ask />} />
+          <Route path='/share/:id' element={<Ask />} />
+        </Routes>
       </AuthProvider>
     </Router>
   );
